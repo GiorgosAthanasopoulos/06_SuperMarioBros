@@ -17,3 +17,17 @@ Stretch goals:
 - Add moving platforms
 - Add SFX
 - Add "rooms". (experiment with loading/and unloading scenes when navigating through them?)
+
+- Mario Animations:
+    - idle
+    - walk 
+    - run
+    - jump
+    - crouch
+    - climb
+    - damage
+    - death
+    - enter pipe
+    - exit pipe
+    - skid
+    - swim
