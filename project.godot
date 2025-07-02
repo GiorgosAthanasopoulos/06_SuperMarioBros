@@ -11,9 +11,28 @@ config_version=5
 [application]
 
 config/name="06_SuperMarioBros"
-config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/description="Classic Super Mario Bros clone."
+config/version="1.0.0"
+run/main_scene="uid://qxhd3d6hxrs6"
+config/features=PackedStringArray("4.5", "C#", "Forward Plus")
+config/icon="uid://clclpxvqe6442"
+
+[debug]
+
+file_logging/enable_file_logging=true
+shader_language/warnings/treat_warnings_as_errors=true
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
 
 [dotnet]
 
 project/assembly_name="06_SuperMarioBros"
+
+[physics]
+
+2d/run_on_separate_thread=true
+3d/run_on_separate_thread=true
