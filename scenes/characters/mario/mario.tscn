@@ -1,0 +1,95 @@
+[gd_scene load_steps=11 format=3 uid="uid://1b03603lkcvc"]
+
+[ext_resource type="Texture2D" uid="uid://cxa2bv4ui03fm" path="res://assets/sprites/characters/mario/mario.png" id="1_3nlxn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2sq5"]
+atlas = ExtResource("1_3nlxn")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uoef0"]
+atlas = ExtResource("1_3nlxn")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nlxn"]
+atlas = ExtResource("1_3nlxn")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxbs5"]
+atlas = ExtResource("1_3nlxn")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0os8p"]
+atlas = ExtResource("1_3nlxn")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykuto"]
+atlas = ExtResource("1_3nlxn")
+region = Rect2(160, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dstsr"]
+atlas = ExtResource("1_3nlxn")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msr33"]
+atlas = ExtResource("1_3nlxn")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b222c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2sq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uoef0")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nlxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxbs5")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 3.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"run_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0os8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykuto")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dstsr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msr33")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 3.0
+}]
+
+[node name="Mario" type="Node2D"]
+scale = Vector2(5, 5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_b222c")
+animation = &"run_right"
