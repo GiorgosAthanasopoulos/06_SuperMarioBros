@@ -19,10 +19,7 @@ Stretch goals:
 - Add "rooms". (experiment with loading/and unloading scenes when navigating through them?)
 
 - Mario Animations:
-    - idle
-    - walk 
     - run
-    - jump
     - crouch
     - climb
     - damage
