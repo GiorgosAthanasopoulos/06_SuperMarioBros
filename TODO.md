@@ -20,11 +20,16 @@ Stretch goals:
 
 - Mario Animations:
     - run
+    - skid
+
     - crouch
+    - uncrouch
+
     - climb
+    - swim
+
     - damage
     - death
+
     - enter pipe
     - exit pipe
-    - skid
-    - swim
