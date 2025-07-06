@@ -19,17 +19,17 @@ Stretch goals:
 - Add "rooms". (experiment with loading/and unloading scenes when navigating through them?)
 
 - Mario Animations:
-    - run
-    - skid
+    - run (pressed running key - shift)
+    - skid (running->input to go to opposite direction)
 
-    - crouch
-    - uncrouch
+    - crouch (pressed crouch key once)
+    - uncrouch (pressed crouch key twice)
 
-    - climb
-    - swim
+    - climb (pressed up/down key)
+    - swim (pressed directional keys while in water)
 
-    - damage
-    - death
+    - damage (taken damage by enemies)
+    - death (took too much damage/fell off map)
 
-    - enter pipe
-    - exit pipe
+    - enter pipe (pressed up/down key for vertical pipes or left/right key for horizontal pipes)
+    - exit pipe (pressed up/down key for vertical pipes or left/right key for horizontal pipes)
