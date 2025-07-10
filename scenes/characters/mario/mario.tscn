@@ -1,50 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://1b03603lkcvc"]
+[gd_scene load_steps=22 format=3 uid="uid://1b03603lkcvc"]
 
 [ext_resource type="Texture2D" uid="uid://cxa2bv4ui03fm" path="res://assets/sprites/characters/mario/mario.png" id="1_3nlxn"]
+[ext_resource type="Script" uid="uid://bvxujv2pamp76" path="res://scripts/characters/mario/Mario.cs" id="1_m2sq5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b222c"]
 size = Vector2(16, 16)
-
-[sub_resource type="Animation" id="Animation_b222c"]
-resource_name = "idle_right"
-loop_mode = 1
-step = 0.33333334
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:region_rect")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Rect2(0, 0, 16, 16), Rect2(16, 0, 16, 16)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape2D:shape:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2(16, 16), Vector2(16, 15)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CollisionShape2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2(0, 0), Vector2(0, 0.5)]
-}
 
 [sub_resource type="Animation" id="Animation_3nlxn"]
 length = 0.001
@@ -59,211 +19,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Rect2(0, 0, 16, 16)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape2D:shape:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(16, 16)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CollisionShape2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_m2sq5"]
-resource_name = "idle_Left"
-loop_mode = 1
-step = 0.33333334
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:region_rect")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Rect2(48, 0, 16, 16), Rect2(64, 0, 16, 16)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape2D:shape:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2(16, 16), Vector2(16, 15)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CollisionShape2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2(0, 0), Vector2(0, 0.5)]
-}
-
-[sub_resource type="Animation" id="Animation_uoef0"]
-resource_name = "walk_right"
-loop_mode = 1
-step = 0.33333334
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:region_rect")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Rect2(96, 0, 16, 16), Rect2(112, 0, 16, 16)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape2D:shape:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2(16, 16), Vector2(16, 15)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CollisionShape2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2(0, 0), Vector2(0, 0.5)]
-}
-
-[sub_resource type="Animation" id="Animation_dstsr"]
-resource_name = "walk_left"
-loop_mode = 1
-step = 0.33333334
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:region_rect")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Rect2(144, 0, 16, 16), Rect2(160, 0, 16, 16)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape2D:shape:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2(16, 16), Vector2(16, 15)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CollisionShape2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2(0, 0), Vector2(0, 0.5)]
-}
-
-[sub_resource type="Animation" id="Animation_msr33"]
-resource_name = "jump_right"
-length = 0.33336666
-step = 0.33333334
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:region_rect")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.083333336, 0.16666667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [Rect2(64, 16, 16, 16), Rect2(80, 16, 16, 16), Rect2(96, 16, 16, 16)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape2D:shape:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(16, 16)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CollisionShape2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_0os8p"]
-resource_name = "jump_left"
-length = 0.33336666
-step = 0.33333334
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:region_rect")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.083333336, 0.16666667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [Rect2(128, 16, 16, 16), Rect2(144, 16, 16, 16), Rect2(160, 16, 16, 16)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -331,8 +86,49 @@ tracks/2/keys = {
 "values": [Vector2(0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_3kmp1"]
-resource_name = "drop_left"
+[sub_resource type="Animation" id="Animation_b222c"]
+resource_name = "idle_right"
+loop_mode = 1
+step = 0.33333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Rect2(0, 0, 16, 16), Rect2(16, 0, 16, 16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:shape:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(16, 16), Vector2(16, 15)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(0, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_msr33"]
+resource_name = "jump_right"
 length = 0.33336666
 step = 0.33333334
 tracks/0/type = "value"
@@ -345,7 +141,89 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.083333336, 0.16666667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [Rect2(0, 32, 16, 16), Rect2(16, 32, 16, 16), Rect2(32, 32, 16, 16)]
+"values": [Rect2(64, 16, 16, 16), Rect2(80, 16, 16, 16), Rect2(96, 16, 16, 16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:shape:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(16, 16)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uoef0"]
+resource_name = "walk_right"
+loop_mode = 1
+step = 0.33333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Rect2(96, 0, 16, 16), Rect2(112, 0, 16, 16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:shape:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(16, 16), Vector2(16, 15)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(0, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_dj3et"]
+resource_name = "run_right"
+length = 1.0000334
+step = 0.33333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.6666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Rect2(192, 0, 16, 16), Rect2(208, 0, 16, 16), Rect2(224, 0, 16, 16)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -375,18 +253,62 @@ tracks/2/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3nlxn"]
 _data = {
 &"RESET": SubResource("Animation_3nlxn"),
-&"drop_left": SubResource("Animation_3kmp1"),
 &"drop_right": SubResource("Animation_ykuto"),
-&"idle_left": SubResource("Animation_m2sq5"),
 &"idle_right": SubResource("Animation_b222c"),
-&"jump_left": SubResource("Animation_0os8p"),
 &"jump_right": SubResource("Animation_msr33"),
-&"walk_left": SubResource("Animation_dstsr"),
+&"run_right": SubResource("Animation_dj3et"),
 &"walk_right": SubResource("Animation_uoef0")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_m2sq5"]
+animation = &"drop_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uoef0"]
+animation = &"idle_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dstsr"]
+animation = &"jump_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_msr33"]
+animation = &"walk_right"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_m2sq5"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uoef0"]
+advance_mode = 2
+advance_condition = &"is_walking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dstsr"]
+advance_mode = 2
+advance_condition = &"!is_walking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_msr33"]
+advance_mode = 2
+advance_condition = &"is_jumping"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0os8p"]
+advance_mode = 2
+advance_condition = &"is_falling"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ykuto"]
+advance_mode = 2
+advance_condition = &"!is_falling"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_m2sq5"]
+states/drop_right/node = SubResource("AnimationNodeAnimation_m2sq5")
+states/drop_right/position = Vector2(476, 1)
+states/idle_right/node = SubResource("AnimationNodeAnimation_uoef0")
+states/idle_right/position = Vector2(359, 109)
+states/jump_right/node = SubResource("AnimationNodeAnimation_dstsr")
+states/jump_right/position = Vector2(609, 109)
+states/walk_right/node = SubResource("AnimationNodeAnimation_msr33")
+states/walk_right/position = Vector2(487, 233)
+transitions = ["Start", "idle_right", SubResource("AnimationNodeStateMachineTransition_m2sq5"), "idle_right", "walk_right", SubResource("AnimationNodeStateMachineTransition_uoef0"), "walk_right", "idle_right", SubResource("AnimationNodeStateMachineTransition_dstsr"), "idle_right", "jump_right", SubResource("AnimationNodeStateMachineTransition_msr33"), "jump_right", "drop_right", SubResource("AnimationNodeStateMachineTransition_0os8p"), "drop_right", "idle_right", SubResource("AnimationNodeStateMachineTransition_ykuto")]
+graph_offset = Vector2(55, -38)
+
 [node name="Mario" type="CharacterBody2D"]
-scale = Vector2(5, 5)
+script = ExtResource("1_m2sq5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_b222c")
@@ -401,3 +323,22 @@ texture_filter = 1
 texture = ExtResource("1_3nlxn")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3nlxn")
+}
+tree_root = SubResource("AnimationNodeStateMachine_m2sq5")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/!is_falling = false
+parameters/conditions/!is_walking = false
+parameters/conditions/is_falling = false
+parameters/conditions/is_jumping = false
+parameters/conditions/is_walking = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_smoothed = true
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true

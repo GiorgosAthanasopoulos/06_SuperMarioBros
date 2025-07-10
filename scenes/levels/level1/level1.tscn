@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=4 uid="uid://qxhd3d6hxrs6"]
+
+[ext_resource type="Texture2D" uid="uid://dxs8ir8h7hc7t" path="res://assets/sprites/levels/level1/level1.png" id="1_jedq5"]
+[ext_resource type="PackedScene" uid="uid://1b03603lkcvc" path="res://scenes/characters/mario/mario.tscn" id="2_4l2q5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4l2q5"]
+texture = ExtResource("1_jedq5")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 4.136751, -8, 4.6763268)
+0:0/0/physics_layer_0/polygon_0/one_way = true
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3xb12"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_4l2q5")
+
+[node name="Level1" type="Node2D"]
+scale = Vector2(3, 3)
+
+[node name="Map" type="TileMapLayer" parent="."]
+position = Vector2(138.33333, 235)
+tile_map_data = PackedByteArray("AAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAAAAAADAP//AAAAAAAAAAAEAP//AAAAAAAAAAAFAP//AAAAAAAAAAAGAP//AAAAAAAAAAAHAP//AAAAAAAAAAAIAP//AAAAAAAAAAAJAP//AAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD9////AAAAAAAAAAD8////AAAAAAAAAAD7////AAAAAAAAAAD6////AAAAAAAAAAD5////AAAAAAAAAAD4////AAAAAAAAAAD3////AAAAAAAAAAD2////AAAAAAAAAAAKAP//AAAAAAAAAAALAP//AAAAAAAAAAAMAP//AAAAAAAAAAANAP//AAAAAAAAAAAOAP//AAAAAAAAAAAPAP//AAAAAAAAAAAQAP//AAAAAAAAAAARAP//AAAAAAAAAAASAP//AAAAAAAAAAATAP//AAAAAAAAAAAUAP//AAAAAAAAAAAVAP//AAAAAAAAAAAWAP//AAAAAAAAAAAHAP3/AAAAAAAAAAAIAP3/AAAAAAAAAAAVAP7/AAABAAAAAAA=")
+tile_set = SubResource("TileSet_3xb12")
+
+[node name="Mario" parent="." instance=ExtResource("2_4l2q5")]
+position = Vector2(213, 207)
