@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://nbhoertn3qas"]
+
+[ext_resource type="Script" uid="uid://gpyg2w8elkqy" path="res://scripts/levels/killzone.gd" id="1_mlifx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cgihf"]
+size = Vector2(16, 16)
+
+[node name="killzone" type="Area2D"]
+script = ExtResource("1_mlifx")
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cgihf")
+
+[node name="Kill Respawn Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Kill Respawn Timer" to="." method="_on_kill_respawn_timer_timeout"]
