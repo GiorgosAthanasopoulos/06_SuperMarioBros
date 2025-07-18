@@ -16,6 +16,10 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
+	handle_navigation()
+
+
+func handle_navigation() -> void:
 	if nav_agent.is_navigation_finished():
 		current_target = start.global_position if current_target == end.global_position else end.global_position
 		nav_agent.target_position = current_target
